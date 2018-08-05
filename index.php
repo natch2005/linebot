@@ -17,7 +17,8 @@
       $arrayPostData['messages'][1]['type'] = "sticker";
       $arrayPostData['messages'][1]['packageId'] = "2";
       $arrayPostData['messages'][1]['stickerId'] = "34";
-      include 'http://1.179.171.188/outsource/linelogin.php?mes=5555';
+     
+      header('Location:http://1.179.171.188/outsource/linelogin.php?mes=5555');
       pushMsg($arrayHeader,$arrayPostData);
       
    }

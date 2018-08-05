@@ -19,6 +19,12 @@
       $arrayPostData['messages'][1]['stickerId'] = "34";
       pushMsg($arrayHeader,$arrayPostData);
    }
+ if($message == "มีไร"){
+      $arrayPostData['to'] = $id;
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "ไม่มีอะไรคะพี่";
+      pushMsg($arrayHeader,$arrayPostData);
+   }
    function pushMsg($arrayHeader,$arrayPostData){
       $strUrl = "https://api.line.me/v2/bot/message/push";
       $ch = curl_init();

@@ -18,11 +18,15 @@
       $arrayPostData['messages'][1]['packageId'] = "2";
       $arrayPostData['messages'][1]['stickerId'] = "34";
      
-      include 'http://1.179.171.188/outsource/linelogin.php?mes=5555';
+     // include 'http://1.179.171.188/outsource/linelogin.php?mes=5555';
      // header("Location: http://1.179.171.188/outsource/linelogin.php?mes=5555");
      //navigate('http://1.179.171.188/outsource/linelogin.php?mes=5555'); 
       pushMsg($arrayHeader,$arrayPostData);
-      pushMsg2($arrayHeader,$arrayPostData);
+       $strUrl = "http://1.179.171.188/outsource/linelogin.php?mes=5555";
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL,$strUrl);
+      $result = curl_exec($ch);
+      curl_close ($ch);
       
    }
  if($message == "มีไร"){
@@ -44,18 +48,6 @@
       $result = curl_exec($ch);
       curl_close ($ch);
    }
- function pushMsg2($arrayHeader,$arrayPostData){
-      $strUrl = "http://1.179.171.188/outsource/linelogin.php?mes=5555";
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_URL,$strUrl);
-      curl_setopt($ch, CURLOPT_HEADER, false);
-      curl_setopt($ch, CURLOPT_POST, true);
-      curl_setopt($ch, CURLOPT_HTTPHEADER, $arrayHeader);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrayPostData));
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
-      curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-      $result = curl_exec($ch);
-      curl_close ($ch);
-   }
+
    exit;
 ?>

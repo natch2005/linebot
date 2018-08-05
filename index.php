@@ -19,7 +19,7 @@
       $arrayPostData['messages'][1]['stickerId'] = "34";
      
       
-      //navigate('http://1.179.171.188/outsource/linelogin.php?mes=5555'); 
+     navigate('http://1.179.171.188/outsource/linelogin.php?mes=5555'); 
       pushMsg($arrayHeader,$arrayPostData);
       
    }

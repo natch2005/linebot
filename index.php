@@ -22,12 +22,12 @@
       curl_close ($ch);
    }
 
-   if($message == "รายงานจักษุ"){
+   if($message == "รายงานตา"){
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "ดูรายงานที่ Line Notify นะครับ";
       pushMsg($arrayHeader,$arrayPostData);
-       $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=รายงานจักษุ";
+       $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=รายงานตา";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL,$strUrl);
       $result = curl_exec($ch);

@@ -22,7 +22,7 @@
      // header("Location: http://1.179.171.188/outsource/linelogin.php?mes=5555");
      //navigate('http://1.179.171.188/outsource/linelogin.php?mes=5555'); 
       pushMsg($arrayHeader,$arrayPostData);
-       $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=ดี";
+       $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=รายงานผู้ป่วยนอก";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL,$strUrl);
       $result = curl_exec($ch);

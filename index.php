@@ -10,13 +10,13 @@
    //รับ id ของผู้ใช้
    $id = $arrayJson['events'][0]['source']['userId'];
    #ตัวอย่าง Message Type "Text + Sticker"
-   if($message == "ดี"){
+   if($message == "รายงานผู้ป่วยนอก"){
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
-      $arrayPostData['messages'][1]['type'] = "sticker";
-      $arrayPostData['messages'][1]['packageId'] = "2";
-      $arrayPostData['messages'][1]['stickerId'] = "34";
+      $arrayPostData['messages'][0]['text'] = "ดูรายงานที่ Line Notify นะครับ";
+      //$arrayPostData['messages'][1]['type'] = "sticker";
+      //$arrayPostData['messages'][1]['packageId'] = "2";
+      //$arrayPostData['messages'][1]['stickerId'] = "34";
      
      // include 'http://1.179.171.188/outsource/linelogin.php?mes=5555';
      // header("Location: http://1.179.171.188/outsource/linelogin.php?mes=5555");

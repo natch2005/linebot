@@ -14,21 +14,26 @@
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "ดูรายงานที่ Line Notify นะครับ";
-      //$arrayPostData['messages'][1]['type'] = "sticker";
-      //$arrayPostData['messages'][1]['packageId'] = "2";
-      //$arrayPostData['messages'][1]['stickerId'] = "34";
-     
-     // include 'http://1.179.171.188/outsource/linelogin.php?mes=5555';
-     // header("Location: http://1.179.171.188/outsource/linelogin.php?mes=5555");
-     //navigate('http://1.179.171.188/outsource/linelogin.php?mes=5555'); 
       pushMsg($arrayHeader,$arrayPostData);
        $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=รายงานผู้ป่วยนอก";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL,$strUrl);
       $result = curl_exec($ch);
       curl_close ($ch);
-      
    }
+
+   if($message == "รายงานจักษุ"){
+      $arrayPostData['to'] = $id;
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "ดูรายงานที่ Line Notify นะครับ";
+      pushMsg($arrayHeader,$arrayPostData);
+       $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=รายงานจักษุ";
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL,$strUrl);
+      $result = curl_exec($ch);
+      curl_close ($ch);
+   }
+
  if($message == "มีไร"){
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";

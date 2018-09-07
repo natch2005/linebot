@@ -13,7 +13,7 @@
    if($message == "รายงานผู้ป่วยนอก"){
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "ดูรายงานที่ Line Notify นะครับ";
+     // $arrayPostData['messages'][0]['text'] = "ดูรายงานที่ Line Notify นะครับ";
       pushMsg($arrayHeader,$arrayPostData);
        $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=รายงานผู้ป่วยนอก";
       $ch = curl_init();
@@ -37,7 +37,7 @@
  if($message == "มีไร"){
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "ไม่มีอะไรคะพี่";
+     // $arrayPostData['messages'][0]['text'] = "ไม่มีอะไรคะพี่";
       pushMsg($arrayHeader,$arrayPostData);
    }
    function pushMsg($arrayHeader,$arrayPostData){

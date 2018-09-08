@@ -34,6 +34,18 @@
       curl_close ($ch);
    }
 
+   if($message == "รายงาน admit"){
+      $arrayPostData['to'] = $id;
+      $arrayPostData['messages'][0]['type'] = "text";
+     $arrayPostData['messages'][0]['text'] = "การดึงข้อมูลจาก server จะแจ้งที่ Line Notify นะครับ แจ้งเข้า Line กลุ่มครับ";
+      pushMsg($arrayHeader,$arrayPostData);
+       $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=รายงานตา";
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL,$strUrl);
+      $result = curl_exec($ch);
+      curl_close ($ch);
+   }
+
  if($message == "มีไร"){
       $arrayPostData['to'] = $id;
       $arrayPostData['messages'][0]['type'] = "text";

@@ -39,7 +39,7 @@
       $arrayPostData['messages'][0]['type'] = "text";
      $arrayPostData['messages'][0]['text'] = "การดึงข้อมูลจาก server จะแจ้งที่ Line Notify นะครับ แจ้งเข้า Line กลุ่มครับ";
       pushMsg($arrayHeader,$arrayPostData);
-       $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=รายงานตา";
+       $strUrl = "http://1.179.171.188/linebot/chkmess.php?mes=รายงาน admit";
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL,$strUrl);
       $result = curl_exec($ch);
